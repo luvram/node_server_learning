@@ -5,6 +5,8 @@ const debug = require('debug')('app:startup');
 const logger = require('./middleware/logger');
 const courses = require('./routes/courses');
 const home = require('./routes/home');
+const Joi = require('joi');
+Joi.objectId = require('joi-objectid')(Joi);
 const express = require('express');
 const app = express();
 
