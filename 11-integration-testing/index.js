@@ -5,8 +5,12 @@ const app = express();
 require('./startup/config')();
 require('./startup/logging')();
 require('./startup/db')();
-require('./startup/validation')();
 require('./startup/routes')(app);
+require('./startup/validation')();
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => winston.info(`Listening on port ${port}...`));
+if (process.env.NODE_ENV !== 'test') {
+    app.listen(port, () => winston.info(`Listening on port ${port}...`));
+}
+
+module.exports = app;
