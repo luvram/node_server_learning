@@ -1,0 +1,23 @@
+{
+    "name": "5-mongoose-connected-data",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/luvram/node_server_learning.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/luvram/node_server_learning/issues"
+    },
+    "homepage": "https://github.com/luvram/node_server_learning#readme",
+    "dependencies": {
+      "mongoose": "^5.3.8"
+    }
+  }
