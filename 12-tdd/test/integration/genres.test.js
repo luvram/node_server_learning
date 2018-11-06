@@ -8,8 +8,10 @@ let server;
 describe('/api/genres', () => {
     beforeAll(() => { server = require('../../index'); });
     afterAll(async () => {
+        await server.close();
+    });
+    afterEach(async () => {
         await Genre.remove({});
-        server.close();
     });
 
     describe('GET /', () => {
@@ -74,7 +76,7 @@ describe('/api/genres', () => {
         });
         it('should save the genre if it is valid', async () => {
             const res = await exec();
-            const genre = await Genre.find({name:'genre1'});
+            const genre = await Genre.find({ name: 'genre1' });
             expect(genre).not.toBeNull();
         });
         it('should save the genre if it is valid', async () => {
