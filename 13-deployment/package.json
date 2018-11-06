@@ -1,10 +1,11 @@
 {
-  "name": "12-tdd",
+  "name": "13-deployment",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --watchAll --coverage"
+    "test": "jest --verbose --watchAll --coverage",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/luvram/node_server_learning#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.3",
     "config": "^2.0.1",
     "debug": "^4.1.0",
     "express": "^4.16.4",
